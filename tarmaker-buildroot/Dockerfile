@@ -38,6 +38,7 @@ RUN for CFGVAR in \
     CONFIG_BRCTL \
     CONFIG_FEATURE_BRCTL_FANCY \
     CONFIG_FEATURE_BRCTL_SHOW \
+    CONFIG_HTTPD \
     ; do sed -i "s/# $CFGVAR is not set/$CFGVAR=y/" package/busybox/busybox-1.22.x.config ; done
 RUN make olddefconfig
 RUN make
